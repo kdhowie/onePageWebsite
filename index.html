@@ -6,17 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<!-- navigation -->
-	<!-- <ul id="nav">
-		<li class="current"><a href="#home">Home</a></li>
-		<li><a href="#discoveries">Discoveries</a></li>
-		<li><a href="#about us">About Us</a></li>
-		<li><a href="#get involved">Get Involved</a></li>
-	</ul> -->
-
 	<div class="nav-wrapper">
 		<div id="menu-icon">&#9776;</div>
 		<a class="navbar-brand" href="#">
@@ -32,63 +26,61 @@
 			</div>
 
 	<!-- body -->
-	<div id="container">
-		<div class="section" id="home">
+	<div id="section">
+		<section id="home">
 		<h2>Home</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur.</p>
 		<p><a href="#discoveries">Learn More</a></p>
-	</div>
-	<div class="section" id="discoveries">
+
+		<section id="discoveries">
 		<h2>Discoveries</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur.</p>
 		<p><a href="#about us">Learn More</a></p>
-	</div>
-	<div class="section" id="about us">
+
+	<div>
+		<section id="about us">
 		<h2>About Us</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur.</p>
 		<p><a href="#get involved">Learn More</a></p>
-	</div>
-	<div class="section" id="get involved">
+
+	<div>
+		<section id="get involved">
 		<h2>Get Involved</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus exercitationem unde, vel odio. Assumenda et perferendis quam reprehenderit praesentium autem, repudiandae eaque excepturi cumque ex, porro tenetur libero eveniet pariatur.</p>
 		<p><a href="#get involved">Get Involved</a></p>
 	</div>
 
 <!-- scripts -->
-<script src="js/jquery.nav.js"></script>
+<script src="js/jquery-1.12.3.min.js"></script>
 <script>
-	$(document).ready(function() {
-		$('#nav').onePageNav();
-		});
-</script>
-
-<script src="js/jquery-1.12.3.min.js"</script>
-
-<script src="js/jquery.scrollTo.min.js"></script>
-
-
-<!-- javascript to create fixed scrolling -->
-<script>$(document).ready(function(){
-//   $(window).scroll(function(){
-//     if($(window).scrollTop() > 900 &&  
-//       $(".nav-wrapper").css("position") != "fixed"){
-//       $(".nav-wrapper").hide(function(){
-//         $(".nav-wrapper").css("position", "fixed")
-//         $(".nav-wrapper").slideDown('1000')
-//       })
-//     }else if($(window).scrollTop() <= 900 ){
-//       $(".nav-wrapper").css("position", "initial")
-//     }
-//   })
-// })
-	// fix bug where menu is still hidden when we make our page bigger
-	// $(window).resize(function(){
-	// var w = $(window).width();
-	// width is greater than 768 and nav is hidden
-	// if (w > 768 && $(".nav-wrapper nav").is(":hidden") ) {
-	// $(".nav-wrapper nav").removeAttr('style');
-		// }
-		// })
-</script>
+	$('#nav').onePageNav({
+    currentClass: 'current',
+    changeHash: false,
+    scrollSpeed: 750,
+    scrollThreshold: 0.5,
+    filter: '',
+    easing: 'swing',
+    begin: function() {
+    },
+    end: function() {
+    },
+    scrollChange: function($currentListItem) {
+    }
+});</script>
+<script>
+	$(document).ready(function(){
+  	$(window).scroll(function(){
+    	if($(window).scrollTop() > 900 &&  
+      		$(".nav-wrapper").css("position") != "fixed"){
+      		$(".nav-wrapper").hide(function(){
+        	$(".nav-wrapper").css("position", "fixed")
+        	$(".nav-wrapper").slideDown('1000')
+      	})
+    }else if($(window).scrollTop() <= 900 ){
+      	$(".nav-wrapper").css("position", "initial")
+    }
+  	})
+	})
+	</script>
 </body>
 </html>

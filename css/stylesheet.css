@@ -1,8 +1,12 @@
-body {
-
-	section {
+	.section {
 		height: 600px;
-		padding-top: 100px;}
+		padding-top: 120px;
+	}
+	
+	body {
+	font-family: 'Merriweather', serif;
+	font-size: small;
+	line-height: 150%
 	}
 
 	h2 {
@@ -10,12 +14,6 @@ body {
 		font-weight: 300;
 		font-size: x-large;
 		color: #f0522c;
-	}
-
-	body {
-		font-family: 'Merriweather', serif;
-		font-size: small;
-		line-height: 150%
 	}
 
 	a {
@@ -88,11 +86,6 @@ body {
 		padding-top: 38px;
 		cursor: pointer;
 		display: block;
-	}
-
-	#container {
-		height: 600px;
-		padding-top: 300px;}
 	}
 
 	/*.nav-wrapper @media {*/

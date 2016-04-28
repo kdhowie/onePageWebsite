@@ -1,12 +1,8 @@
-	.section {
-		height: 600px;
-		padding-top: 120px;
-	}
-	
 	body {
-	font-family: 'Merriweather', serif;
-	font-size: small;
-	line-height: 150%
+		font-family: 'Merriweather', serif;
+		font-size: small;
+		line-height: 150%
+		padding-right: 10px;
 	}
 
 	h2 {
@@ -52,7 +48,7 @@
 	.nav-wrapper ul {
 		margin: 0;
 		padding: 0;
-		padding-top: 38px;
+		padding-top: 42px;
 	}
 
 	.nav-wrapper li {
@@ -83,12 +79,16 @@
 		float: right;
 		font-size: 32px;
 		padding-right: 10px;
-		padding-top: 38px;
+		padding-top: 28px;
 		cursor: pointer;
 		display: block;
 	}
 
-	/*.nav-wrapper @media {*/
-		/*(max-width: 768px) */
-		/*}*/
+	.nav-wrapper @media {
+		(max-width: 768px)
+	}
+
+	#section {
+		padding-top: 120px;
+		height: 600px;
 	}

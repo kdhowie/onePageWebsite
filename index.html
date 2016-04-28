@@ -16,7 +16,7 @@
 		<a class="navbar-brand" href="#">
 			<img src="img/logo.png"></a>
 				<nav>
-					<ul>
+					<ul id ="nav">
 						<li><a href="#home">Home</a></li>
 						<li><a href="#discoveries">Discoveries</a></li>
 						<li><a href="#about us">About Us</a></li>
@@ -51,9 +51,11 @@
 	</div>
 
 <!-- scripts -->
+<!-- script for onePageNav is not working -->
 <script src="js/jquery-1.12.3.min.js"></script>
 <script>
-	$('#nav').onePageNav({
+	$(document).ready(function() {
+	$('#nav').onePageNav();
     currentClass: 'current',
     changeHash: false,
     scrollSpeed: 750,

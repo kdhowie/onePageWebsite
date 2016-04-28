@@ -1,6 +1,13 @@
+	#section {
+		padding-top: 120px;
+		/*section height is not working*/
+		height: 600px;
+	}
+
 	body {
 		font-family: 'Merriweather', serif;
 		font-size: small;
+		/*inline height and padding-right is not working*/
 		line-height: 150%
 		padding-right: 10px;
 	}
@@ -86,9 +93,4 @@
 
 	.nav-wrapper @media {
 		(max-width: 768px)
-	}
-
-	#section {
-		padding-top: 120px;
-		height: 600px;
 	}

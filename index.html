@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+	
+	</head>
+
+	<body>
+	<!-- navigation -->
+		<div class="nav-wrapper">
+		<div id="menu-icon">&#9776;</div>
+		<a class="navbar-brand" href="#">
+			<img src="img/logo.png"></a>
+				<nav>
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#discoveries">Discoveries</a></li>
+						<li><a href="#about us">About Us</a></li>
+						<li><a href="#get involved">Get Involved</a></li>
+					</ul>
+				</nav>
+			</div>
+
+		<div>
+			<section id="home"></section>
+				<h2>Home</h2>
+			<section id="discoveries"></section>
+				<h2>Discoveries</h2>
+			<section id="about us"></section>
+				<h2>About Us</h2>
+			<section id="get involved"></section>
+			<h2>Get Involved</h2>
+		</div>
+
+<script src="js/jquery-1.12.3.min.js"</script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<!-- javascript to create fixed scrolling -->
+<script>$(document).ready(function(){
+  $(window).scroll(function(){
+    if($(window).scrollTop() > 900 &&  
+      $(".nav-wrapper").css("position") != "fixed"){
+      $(".nav-wrapper").hide(function(){
+        $(".nav-wrapper").css("position", "fixed")
+        $(".nav-wrapper").slideDown('1000')
+      })
+    }else if($(window).scrollTop() <= 900 ){
+      $(".nav-wrapper").css("position", "initial")
+    }
+  })
+})
+	// fix bug where menu is still hidden when we make our page bigger
+	// $(window).resize(function(){
+	// var w = $(window).width();
+	// width is greater than 768 and nav is hidden
+	// if (w > 768 && $(".nav-wrapper nav").is(":hidden") ) {
+	// $(".nav-wrapper nav").removeAttr('style');
+		// }
+		// })
+</script>
+</body>
+</html>
